@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ZyllemApiService } from './app.service';
 import { ArticleModule } from './components/articles';
+import { CommonModule } from "@angular/common";
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     ArticleModule
   ],

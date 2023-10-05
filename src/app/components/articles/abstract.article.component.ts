@@ -6,4 +6,5 @@ export abstract class AbstractArticleComponent {
     abstract VideoArticle: VideoArticle;
     abstract FeaturedArticle: FeaturedArticle;
     abstract Article: Article;
+    
 }

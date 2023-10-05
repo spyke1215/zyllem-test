@@ -5,6 +5,7 @@ import {
 
 import { ZyllemApiService } from "./app.service";
 import { Article, VideoArticle } from './model/article';
+import { log } from 'console';
 
 @Component({
   selector: 'app-root',
