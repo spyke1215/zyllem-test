@@ -4,10 +4,12 @@ import { AbstractArticleComponent } from "./abstract.article.component";
 import { articleMapper } from "./article.mapper";
 import { ArticleNormalComponent } from "./normal/article.normal.component";
 import { ArticleVideoComponent } from "./video/article.video.component";
+import { ArticleFeatureComponent } from "./feature/article.feature.component";
 
 export const articleEntries: Type<AbstractArticleComponent>[] = [
     ArticleNormalComponent,
-    ArticleVideoComponent
+    ArticleVideoComponent,
+    ArticleFeatureComponent
 ];
 
 const registerArticle = (articleType: ArticleType, component: Type<AbstractArticleComponent>) => {
@@ -24,3 +26,4 @@ const registerArticle = (articleType: ArticleType, component: Type<AbstractArtic
 
 registerArticle(ArticleType.NORMAL, ArticleNormalComponent);
 registerArticle(ArticleType.VIDEO, ArticleVideoComponent);
+registerArticle(ArticleType.FEATURED, ArticleFeatureComponent);

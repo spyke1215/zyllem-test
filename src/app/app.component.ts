@@ -4,8 +4,7 @@ import {
 } from '@angular/core';
 
 import { ZyllemApiService } from "./app.service";
-import { Article, VideoArticle } from './model/article';
-import { log } from 'console';
+import { Article, VideoArticle, ArticleType } from './model/article';
 
 @Component({
   selector: 'app-root',
