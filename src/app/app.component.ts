@@ -32,5 +32,5 @@ export class AppComponent implements OnInit {
         this.results = result;
         this.cdr.markForCheck();
       });
-  }
+  } 
 }
