@@ -1,6 +1,6 @@
 import { Component, Input } from "@angular/core";
 
-import { NormalArticle } from "src/app/model/article";
+import { FeaturedArticle, NormalArticle, VideoArticle, Article } from "src/app/model/article";
 import { AbstractArticleComponent } from "../abstract.article.component";
 
 @Component({
@@ -9,5 +9,9 @@ import { AbstractArticleComponent } from "../abstract.article.component";
 })
 export class ArticleNormalComponent extends AbstractArticleComponent {
 
-    @Input() article: NormalArticle;
+    VideoArticle: VideoArticle;
+    FeaturedArticle: FeaturedArticle;
+    Article: Article;
+    @Input() NormalArticle: NormalArticle;
+
 }
