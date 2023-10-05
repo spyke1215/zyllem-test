@@ -31,7 +31,7 @@ export class ArticleRendererComponent implements OnInit {
                 hostElement.classList.add('article-item');
                 hostElement.insertAdjacentElement("afterbegin", this.addArticleTitle(article.title));
 
-                componentRef.instance.Article = article;
+                componentRef.instance.article = article;
                 componentRef.changeDetectorRef.detectChanges();
             } else {
                 console.warn(`component not implemented yet for this type ${article.type}.`);

@@ -30,6 +30,7 @@ export class AppComponent implements OnInit {
     this.apiService.getArticles()
       .subscribe(result => {
         this.results = result;
+        // this.videoArticleHighlight = <VideoArticle>this.results.find(x => x.type === ArticleType.VIDEO);
         this.cdr.markForCheck();
       });
   } 

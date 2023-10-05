@@ -11,10 +11,10 @@ import { AbstractArticleComponent } from "../abstract.article.component";
 })
 export class ArticleVideoComponent extends AbstractArticleComponent {
 
-    @Input() Article: VideoArticle;
+    @Input() article: VideoArticle;
 
     get safeVideoUrl() {
-        return this.domSanitize.bypassSecurityTrustResourceUrl(this.Article.videoUrl);
+        return this.domSanitize.bypassSecurityTrustResourceUrl(this.article.videoUrl);
     }
 
     constructor(
