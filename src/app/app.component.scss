@@ -1,7 +1,15 @@
 :host {
 
 }
-  .article-list-holder {
-    width: 100%;
-    display: flex;
-  }
+
+.article-container {
+  width: 100%;
+  display: inline-block;
+}
+
+.article-list-holder {
+  display: flex;
+  justify-content: center;
+  margin: 1em 0;
+}
+  

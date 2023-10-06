@@ -5,9 +5,10 @@ import { AbstractArticleComponent } from "../abstract.article.component";
 
 @Component({
     selector: 'article-feature-component',
-    templateUrl: './article.feature.component.html'
+    templateUrl: './article.feature.component.html',
 })
 export class ArticleFeatureComponent extends AbstractArticleComponent {
 
     @Input() article: FeaturedArticle;
+    
 }
