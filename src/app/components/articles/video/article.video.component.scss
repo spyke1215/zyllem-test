@@ -1,4 +1,8 @@
 :host {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
     iframe {
         width: 100%;
     }
@@ -7,4 +11,8 @@
 #title {
     display: flex;
     justify-content: center;
+    align-items: center;
+    color: #2B1C4E;
+    font-size: 2rem;
+    margin: 1rem 0;
 }
