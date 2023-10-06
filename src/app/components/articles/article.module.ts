@@ -5,6 +5,7 @@ import { ArticleRendererComponent } from "./article.renderer.component";
 import { ArticleVideoComponent } from "./video";
 import { ArticleNormalComponent } from "./normal";
 import { ArticleFeatureComponent } from "./feature";
+import { ArticleFeatureAdComponent } from "./featureAd";
 
 @NgModule({
     imports: [
@@ -15,6 +16,7 @@ import { ArticleFeatureComponent } from "./feature";
         ArticleVideoComponent,
         ArticleNormalComponent,
         ArticleFeatureComponent,
+        ArticleFeatureAdComponent
     ],
     entryComponents: [
         ...articleEntries
@@ -24,6 +26,7 @@ import { ArticleFeatureComponent } from "./feature";
         ArticleVideoComponent,
         ArticleNormalComponent,
         ArticleFeatureComponent,
+        ArticleFeatureAdComponent
     ]
 })
 export class ArticleModule { }
