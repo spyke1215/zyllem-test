@@ -1,4 +1,4 @@
-import { Article } from "src/app/model/article";
+import { Article, FeaturedAdArticle, FeaturedArticle, NormalArticle, VideoArticle } from "src/app/model/article";
 
 export abstract class AbstractArticleComponent {
 

@@ -30,7 +30,12 @@ export class AppComponent implements OnInit {
     this.apiService.getArticles()
       .subscribe(result => {
         this.results = result;
-        // this.videoArticleHighlight = <VideoArticle>this.results.find(x => x.type === ArticleType.VIDEO);
+        console.log(result);
+        const videoIndex = this.results.findIndex(x => x.type === ArticleType.VIDEO);
+        if (videoIndex !== -1) {
+          this.videoArticleHighlight = <VideoArticle>this.results[videoIndex];
+          this.results.splice(videoIndex, 1);
+        }
         this.cdr.markForCheck();
       });
   } 
