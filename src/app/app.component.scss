@@ -1,16 +1,12 @@
-:host {
-
-}
-
 .article-container {
   width: 100%;
-  display: inline-block;
+  display: wrap;
 }
 
 .article-list-holder {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  margin: 1em 0;
 }
 
 .article-header-title {
