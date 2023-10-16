@@ -1,5 +1,6 @@
 import {
     Component, ComponentFactoryResolver, Input,
+    OnChanges,
     OnInit, ViewContainerRef
 } from "@angular/core";
 import { Article } from "src/app/model/article";
@@ -9,7 +10,7 @@ import { articleMapper } from "./article.mapper";
     selector: 'article-renderer-component',
     template: ''
 })
-export class ArticleRendererComponent implements OnInit {
+export class ArticleRendererComponent implements OnChanges {
 
     @Input() articles: Article[];
 
@@ -18,7 +19,8 @@ export class ArticleRendererComponent implements OnInit {
         private readonly componentFactoryResolver: ComponentFactoryResolver
     ) { }
 
-    ngOnInit() {
+    ngOnChanges() {
+        this.viewContainerRef.clear();
         for (const article of this.articles) {
             const resolveArticle = articleMapper.get(article.type);
 

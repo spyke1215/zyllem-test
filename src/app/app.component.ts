@@ -10,7 +10,7 @@ import { Article, VideoArticle, ArticleType } from './model/article';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.Default
 })
 export class AppComponent implements OnInit {
 
@@ -20,10 +20,12 @@ export class AppComponent implements OnInit {
   ) { }
 
   private results: Article[];
+  private filteredResults: Article[];
+  readonly articleType: ArticleType[] = [ArticleType.FEATURED, ArticleType.NORMAL, ArticleType.FEATURED_AD, ArticleType.VIDEO];
   videoArticleHighlight: VideoArticle;
 
   get articles() {
-    return this.results;
+    return this.filteredResults;
   }
 
   ngOnInit(): void {
@@ -36,6 +38,12 @@ export class AppComponent implements OnInit {
           this.results.splice(videoIndex, 1);
         }
         this.cdr.markForCheck();
+        this.filteredResults = this.results;
       });
   } 
+
+  filter(type: ArticleType) {
+    this.filteredResults = this.results.filter(result => result.type === type);
+    console.log(this.filteredResults);
+  }
 }

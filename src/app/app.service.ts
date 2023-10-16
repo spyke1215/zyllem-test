@@ -55,6 +55,15 @@ export class ZyllemApiService {
                 videoUrl: `https://player.vimeo.com/video/361208927?h=00f7581e36`,
             },
             {
+                id: "7",
+                url: "https://www.zyllem.com/success-stories",
+                author: "Rhocela Pasigna",
+                publishedAt: "2018-07-03T16:00:00.000Z",
+                title: "Success Story 2",
+                type: "VIDEO",
+                videoUrl: `https://player.vimeo.com/video/361208927?h=00f7581e36`,
+            },
+            {
                 id: "6",
                 url: "https://www.zyllem.com",
                 author: "Rhocela Pasigna",
